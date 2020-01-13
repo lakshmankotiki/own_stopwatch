@@ -17,34 +17,35 @@ body.appendChild(startButton);
 body.appendChild(stopButton);
 body.appendChild(resetButton);
 
-var d = new Date("01/01/2020");
-var dateString = d.toLocaleTimeString();
-document.querySelector("p").textContent = dateString;
-
 document.querySelectorAll("button")[0].addEventListener('click', function() {
-    var n = 0;
-
-    function count() {
-        console.log("n is: ", n);
-        n += 1;
-    };
-    setInterval(count, 1000);
+    startFunction();
 });
 
-// var startFunction = function() {
-//     var n = 0;
+document.querySelectorAll("button")[1].addEventListener("click", function() {
+    stopFunction();
+});
 
-//     function count() {
-//         console.log("n is: ", n);
-//         n = n + 1;
-//     }
-//     console.log(setInterval(count, 1000));
-// };
+document.querySelectorAll("button")[2].addEventListener("click", function() {
+    resetFunction();
+});
+
+var startFunction = function() {
+    var d = new Date();
+    var timeFormat = d.toLocaleTimeString();
+    document.querySelector("p").textContent = timeFormat;
+    var clearInt = setInterval(() => {
+        startFunction();
+    }, 1000);
+};
+// var recInterval = setInterval(() => {
+//     startFunction();
+// }, 1000);
 
 var stopFunction = function() {
-
+    // clearInterval(clearInt);
+    clearInterval().call(clearInt);
 };
 
 var resetFunction = function() {
-
+    document.querySelector("p").textContent = "00:00:00";
 };

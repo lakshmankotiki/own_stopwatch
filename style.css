@@ -1,0 +1,13 @@
+body {
+    background-color: aqua;
+    text-align: center;
+}
+
+.clock {
+    font-family: sans-serif;
+    margin-top: 50px;
+}
+
+button {
+    margin: 1px;
+}

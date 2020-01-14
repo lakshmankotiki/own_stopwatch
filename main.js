@@ -71,6 +71,13 @@ document.querySelectorAll("button")[2].addEventListener("click", function() {
     secondsCount = 0;
     displayCount();
 });
+
+//applying bootstrap styles for buttons
+var buttonLength = document.querySelectorAll("button").length;
+for(var i=0;i<buttonLength;i++) {
+    document.querySelectorAll("button")[i].classList.add("btn-primary");
+    document.querySelectorAll("button")[i].classList.add("btn");
+}
 //display stopwatch on loading the page and it takes global secondCount means 0
 //so everything is 00:00:00 at this moment
 displayCount();

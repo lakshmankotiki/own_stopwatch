@@ -1,5 +1,6 @@
 body {
-    background-color: aqua;
+    background-color: black;
+    color: white;;
     text-align: center;
 }
 
@@ -8,6 +9,26 @@ body {
     margin-top: 50px;
 }
 
+h2 {
+    margin-top: 5px;
+    color: #be9fe1;
+}
+
 button {
     margin: 1px;
+}
+
+pre {
+    margin-top: 120px;
+    color: #f65c78;
+    font-family: 'Courgette', cursive;
+}
+
+footer {
+    margin-top: 100px;
+    color: #fea5ad;
+}
+
+.quote {
+    color: #42e6a4;
 }
